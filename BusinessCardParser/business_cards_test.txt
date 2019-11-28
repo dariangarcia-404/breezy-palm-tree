@@ -1,14 +1,14 @@
-Asymmetrik
+trik
 Darian Garcia
 Software Engineer
 240 204 1787
-darian.garcia@asymmetrik.com
+darian.garcia@trik.com
 ~
-ASYMMETRIK LTD
+TRIK LTD
 Mike Smith
 Senior Software Engineer
 (410)555-1234
-msmith@asymmetrik.com
+msmith@trik.com
 ~
 Foobar Technologies
 Analytic Developer
