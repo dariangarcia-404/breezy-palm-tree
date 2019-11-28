@@ -4,6 +4,7 @@ Specs:
 
 What to install:
 - pip install -U spacy
+- python -m spacy download en_core_web_sm
 
 How to run: 
 - python3 BusinessCardParser.py
