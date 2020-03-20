@@ -1,14 +1,8 @@
-trik
+a
 Darian Garcia
 Software Engineer
 240 204 1787
-darian.garcia@trik.com
-~
-TRIK LTD
-Mike Smith
-Senior Software Engineer
-(410)555-1234
-msmith@trik.com
+darian.garcia@a.com
 ~
 Foobar Technologies
 Analytic Developer
