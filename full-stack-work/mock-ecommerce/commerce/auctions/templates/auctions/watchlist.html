@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>MyWatchlist</h2>
+    {% for listing in watchlist %}
+      <table>
+        <tr>
+          <th> Title </th>
+          <th> Description </th>
+          <th> Price </th>
+        </tr>
+        <tr>
+          <td> <a href="./listing/{{listing.id}}">{{ listing.title }}</a> </td>
+          <td> {{listing.description}} </td>
+          <td> ${{listing.current_price}}.00 </td>
+        </tr>
+      </table>
+    {% endfor %}
+{% endblock %}
