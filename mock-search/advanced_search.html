@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<style>
+    body {
+        padding: 20px;
+        font-family: 'Lato', sans-serif;
+        text-align: left;
+        font-size: 16px;
+    }
+    .header {
+        text-align: right;
+    }
+    .profile {
+        width: 150px;
+    }
+    .profile-name {
+        margin-top: 5px;
+        font-size: 36px;
+    }
+    .content {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    a {
+        color: #258cdb;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #2571db;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        color: #2571db;
+    }
+    #ip2 {
+        border-radius: 25px;
+        display: inline-block;
+        border: .5px solid #808080;
+        padding: 20px; 
+        width: 500px;
+        height: 8px;   
+    } 
+    #ip3 {
+        display: block;
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    img.resize {
+        align-content: left;
+        max-width:10%;
+        max-height:10%;
+    }
+    input.button{
+        background-color: #2571db;
+        color: white;
+        align-content: right;
+    }
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123778931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123778931-1');
+</script>
+<body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="header">
+
+          <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+              <ul class="pure-menu-list">
+                  
+                    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Search</a></li>
+                  
+              </ul>
+          </div>
+        
+        </div>
+        <dpiv>
+            <img class="resize" src="google_logo.jpg" sizes="">
+            <h2>Advanced Search</h2>
+            <h3>Find pages with...</h3>
+            <form action="https://google.com/search">
+                <p>
+                    <label>all these words: </label>
+                    <input type="text" name="as_q">
+                </p>
+                <p>
+                    <label>this exact word or phrase: </label>
+                    <input type="text" name="as_epq"> 
+                </p>
+                <p>
+                    <label>any of these words: </label>
+                    <input type="text" name="as_oq"> 
+                </p>
+                <p>
+                    <label>none of these words: </label>
+                    <input type="text" name="as_eq"> 
+                </p>
+                <input class="button" type="submit" value="Advanced Search">
+            </form>
+        </div>
+      </div>
+    </main>
+  </body>
+
+</html>

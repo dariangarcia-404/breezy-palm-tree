@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<style>
+    body {
+        padding: 20px;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 16px;
+    }
+    .header {
+        text-align: right;
+    }
+    .profile {
+        width: 150px;
+    }
+    .profile-name {
+        margin-top: 5px;
+        font-size: 36px;
+    }
+    .content {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    a {
+        color: #258cdb;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #2571db;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    #ip2 {
+        border-radius: 25px;
+        display: inline-block;
+        border: .5px solid #808080;
+        padding: 20px; 
+        width: 500px;
+        height: 8px;   
+    } 
+    #ip3 {
+        display: block;
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    img.resize {
+        margin-top: 5%;
+        max-width:27%;
+        max-height:27%;
+    }
+    input.button {
+       align-content: center;
+    }
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123778931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123778931-1');
+</script>
+<body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="header">
+
+          <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+              <ul class="pure-menu-list">
+                  
+                    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Search</a></li>
+                  
+                    <li class="pure-menu-item"><a href="image.html" class="pure-menu-link">Image Search</a></li>
+                  
+                    <li class="pure-menu-item"><a href="advanced_search.html" class="pure-menu-link">Advanced Search</a></li>
+                  
+              </ul>
+          </div>
+        
+        </div>
+        <div>
+            <img class="resize" src="google_logo.jpg" sizes="">
+            <form action="https://google.com/search" target="_blank">
+                <input type="text" name="q" id="ip2">
+                <div id="ip3">
+                    <input class="button" type="submit" value="Google Search">
+                    <input class="button" name="btnI" type="submit" value="I'm Feeling Lucky"> 
+                </div>
+            </form>
+        </div>
+      </div>
+    </main>
+  </body>
+
+</html>

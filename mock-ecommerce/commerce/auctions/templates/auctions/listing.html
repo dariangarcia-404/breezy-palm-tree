@@ -1,0 +1,74 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{listing.title}}</h2>
+    <table>
+      <tr>
+        <th> Title </th>
+        <th> Description </th>
+        <th> Price </th>
+      </tr>
+      <tr>
+        <td>{{listing.title}} </td>
+        <td> {{listing.description}} </td>
+        <td> ${{listing.current_price}}.00 </td>
+      </tr>
+    </table>
+    <br>
+    {% if listing.url %}
+      <img src="{{listing.url}}">
+    {% endif %}
+    {% if user.is_authenticated %}
+      {% if message %}
+          <p>{{message}}</p>
+          <br>
+      {% endif %}
+      {% if listing.is_open %}
+          <form action="" method="post">
+              {% csrf_token %}
+              <strong>Bid on {{listing.title}}</strong>
+              <input type="number" name="bidprice" placeholder="{{price}}">
+              <input type="submit">
+          </form>
+          <br>
+          <form action="" method="post">
+              {% csrf_token %}
+              {% if is_watching %}
+                  <input type="submit" name="add_watchlist" value="Remove from watchlist">
+              {% else %}
+                  <input type="submit" name="add_watchlist" value="Add to watchlist">
+              {% endif %}
+          </form>
+          {% if is_creator %}
+              <br>
+              <form action="" method="post">
+                {% csrf_token %}
+                  <input type="submit" name="close_listing" value="Close your listing!">
+              </form>
+          {% endif %}
+      {% else %}
+          <p>Listing is closed. Item won by {{winner}}!</p>
+      {% endif %}
+      <br>
+      <form action="" method="post">
+          {% csrf_token %}
+          <strong>Comment on {{listing.title}}</strong>
+          <input type="text" name="comment_text" value="">
+          <input type="submit">
+      </form>
+    {% endif %}
+    {% if comments %}
+      <table>
+        <tr>
+          <th> User </th>
+          <th> Comment </th>
+        </tr>
+        {% for comment in comments %}
+          <tr>
+            <td> {{comment.commenter}} </td>
+            <td> {{comment}} </td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+{% endblock %}
