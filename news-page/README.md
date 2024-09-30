@@ -1,35 +1,41 @@
-```markdown
 # New York Times Technology News App
 
-This is a single-page application that displays the latest technology news from the New York Times. The app fetches data from the New York Times Technology RSS feed, and it allows users to toggle between English and Spanish translations for the article titles and descriptions using the Google Translate API.
+This is a single-page application that displays the latest technology news from the New York Times. The app fetches data from the New York Times Technology RSS feed and allows users to toggle between English and Spanish translations for the article titles and descriptions using the Google Translate API.
+
+## Project Overview
+- **Frontend**: Built using React, styled with CSS.
+- **Backend**: A simple Flask server that fetches and serves the RSS feed data.
+- **Language Toggle**: Switch between English and Spanish using the Google Cloud Translation API.
+- **Live Date Display**: The current date is displayed at the top.
+- **Clickable NYT Logo**: Clicking on the New York Times logo redirects to the main [New York Times](https://www.nytimes.com) homepage.
 
 ## Project Structure
 ```
 nyt-rss-app/
 ├── backend/                # Flask backend folder
-│   ├── server.py
+│   ├── server.py           # Main backend server script
 │   └── requirements.txt    # Python dependencies for the backend
 ├── frontend/               # React frontend folder
 │   ├── public/
 │   │   └── nyt-logo.png    # The New York Times logo image
 │   ├── src/
-│   │   ├── App.js
-│   │   ├── App.css
-│   │   └── index.js
-│   └── package.json
+│   │   ├── App.js          # Main React component for the frontend
+│   │   ├── App.css         # CSS for styling the application
+│   │   └── index.js        # Entry point for the React application
+│   └── package.json        # Node.js dependencies for the frontend
 ├── README.md
 ```
 
 ## Features
 - **RSS Feed Integration**: Fetches technology news from the [New York Times Technology RSS Feed](https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml).
-- **Language Toggle**: Allows users to toggle between English and Spanish for the titles and descriptions.
+- **Language Toggle**: Toggle between English and Spanish for titles and descriptions.
 - **Live Date Display**: Displays the current date at the top of the page.
 - **Clickable New York Times Logo**: Clicking the New York Times logo redirects to the main [New York Times](https://www.nytimes.com) homepage.
 
 ## Prerequisites
 - **Node.js**: Ensure that Node.js is installed on your system.
 - **Python 3**: Required for the backend server.
-- **Google Translate API Key**: You need to set up a Google Cloud project and enable the Translation API to obtain an API key. Refer to [Google Cloud Translation API](https://cloud.google.com/translate/docs/setup) for more information.
+- **Google Translate API Key**: Set up a Google Cloud project and enable the Translation API to obtain an API key. Refer to [Google Cloud Translation API](https://cloud.google.com/translate/docs/setup) for more information.
 
 ## Setup Instructions
 ### 1. Clone the Repository
@@ -47,7 +53,7 @@ cd nyt-rss-app
 2. Create a virtual environment and install dependencies:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # Activate virtual environment
+   source venv/bin/activate  # Activate the virtual environment
    pip install -r requirements.txt
    ```
 
@@ -55,7 +61,7 @@ cd nyt-rss-app
    ```bash
    python server.py
    ```
-   The backend server will run on `http://localhost:5000`.
+   The backend server will run on `http://localhost:5001`.
 
 ### 3. Frontend Setup
 1. Navigate to the `frontend` directory:
@@ -85,6 +91,15 @@ cd nyt-rss-app
 2. Ensure that you can see the technology news articles and the layout matches the design.
 3. Toggle the language between English and Spanish using the button at the top-right corner.
 
+## Environment Variables
+The following environment variables should be set in the `frontend/.env` file:
+
+```
+REACT_APP_GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key_here
+```
+
+> **Note**: Ensure that the `.env` file is not committed to version control by adding it to `.gitignore` if necessary.
+
 ## Project Structure and Files
 ### Backend (`backend/`)
 - **`server.py`**: The main Flask backend server that fetches data from the RSS feed and optionally caches it.
@@ -96,13 +111,6 @@ cd nyt-rss-app
 - **`src/App.css`**: Styles for the application, including the header, articles, and other UI components.
 - **`src/index.js`**: The entry point for the React application.
 - **`.env`**: Environment variables to store sensitive information like the Google Translate API key.
-
-## Environment Variables
-The following environment variables should be set in the `frontend/.env` file:
-
-```
-REACT_APP_GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key_here
-```
 
 ## Known Issues
 - **Google Translate Quota**: Make sure you have sufficient quota for the Google Translate API, as this project translates text dynamically.
@@ -118,8 +126,4 @@ REACT_APP_GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key_here
 This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contact
-For any questions or feedback, feel free to reach out:
-
-- **Email**: your-email@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
-```
+For any questions or feedback, feel free to reach out!
