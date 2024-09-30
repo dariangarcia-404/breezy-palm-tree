@@ -1,0 +1,122 @@
+/* General styling */
+body, html, .App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+/* Header styling */
+.header {
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Flex container for header content */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Space elements out evenly */
+  align-items: center;            /* Vertically center all elements */
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: relative;             /* Ensure we can use absolute positioning */
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  flex: 1;                        /* Allow date to grow and take up space */
+}
+
+/* Center the logo using absolute positioning */
+.header-content a {
+  position: absolute;             /* Position the anchor tag absolutely */
+  left: 50%;                      /* Move to the horizontal center of the container */
+  transform: translateX(-50%);    /* Offset by 50% to correctly center */
+}
+
+.nyt-logo {
+  height: 50px;  /* Adjust the height of the logo as needed */
+}
+
+/* Language toggle button styles */
+.lang-toggle {
+  background: #ddd;
+  border: none;
+  color: #333;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lang-toggle:hover {
+  background: #bbb;
+}
+
+/* Styling for article list */
+.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+}
+
+.article img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.article:hover {
+  transform: scale(1.02);
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-content h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.article-content h2 a {
+  text-decoration: none;
+  color: #0066c0;
+}
+
+.article-content h2 a:hover {
+  text-decoration: underline;
+}
+
+.article-content p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0 0 0;
+}
